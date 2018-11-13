@@ -1,0 +1,23 @@
+{
+  "name": "drupal/codesnippet_mathstats",
+  "type": "drupal-custom-module",
+  "description": "Provides additional languages to the Drupal CKEditor CodeSnippet plugin.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://git.psu.edu/rpc5102/codesnippet_mathstats",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Bob Carey (rpc5102)",
+      "homepage": "https://www.drupal.org/u/rpc5102",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://git.psu.edu/rpc5102/codesnippet_mathstats/issues",
+    "source": "https://git.psu.edu/rpc5102/codesnippet_mathstats.git"
+  },
+  "require": {
+    "drupal/codesnippet": "^1.6"
+  }
+}

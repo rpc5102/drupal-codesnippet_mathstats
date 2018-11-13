@@ -1,0 +1,8 @@
+name: CKEditor CodeSnippet MathStats
+description: 'Provides syntax highlighting for mathematics and statistics languages.'
+package: CKEditor
+type: module
+dependencies:
+  - ckeditor
+  - codesnippet 
+core: 8.x
