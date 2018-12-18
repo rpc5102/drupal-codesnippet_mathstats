@@ -1,0 +1,4 @@
+highlightjs-line-numbers:
+  version: 2.60
+  js:
+    //unpkg.com/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js: { type: external, minified: true, attributes: { defer: true, async: true} }

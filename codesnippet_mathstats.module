@@ -26,3 +26,12 @@ function codesnippet_mathstats_form_filter_format_edit_form_alter(&$form, FormSt
     asort($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']);
   }
 }
+
+/**
+ * Implements hook_form_page_attachments().
+ * Attach library to add line numbers on preformatted code blocks.
+ * @param $page
+ */
+function codesnippet_mathstats_page_attachments(array &$page){
+  $page['#attached']['library'][] = 'codesnippet_mathstats/highlightjs-line-numbers';
+}
