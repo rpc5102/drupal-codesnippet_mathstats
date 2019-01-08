@@ -1,14 +1,14 @@
 {
-  "name": "drupal/codesnippet_mathstats",
-  "type": "drupal-custom-module",
+  "name": "rpc5102/drupal-codesnippet_mathstats",
+  "type": "drupal-module",
   "description": "Provides additional languages to the Drupal CKEditor CodeSnippet plugin.",
-  "keywords": ["Drupal"],
+  "keywords": ["Drupal", "CodeSnippet", "CKEditor"],
   "license": "GPL-2.0+",
   "homepage": "https://git.psu.edu/rpc5102/codesnippet_mathstats",
   "minimum-stability": "dev",
   "authors": [
     {
-      "name": "Bob Carey (rpc5102)",
+      "name": "ROBERT PATRICK CAREY III",
       "homepage": "https://www.drupal.org/u/rpc5102",
       "role": "Maintainer"
     }
