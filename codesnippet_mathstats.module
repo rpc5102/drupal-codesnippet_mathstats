@@ -6,23 +6,3 @@
  * Add support for C/C++, Fortran, Mathematica, Matlab, Python, R, SAS, STATA, LaTeX/TeX
  * @see: https://www.drupal.org/project/codesnippet
  */
-
-use Drupal\Core\Form\FormStateInterface;
-
-/**
- * Implements hook_form_FORM_ID_alter().
- * Add extra languages to the CKEditor CodeSnippet plugin.
- * @param $form
- * @param FormStateInterface $form_state
- * @param $form_id
- */
-function codesnippet_mathstats_form_filter_format_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (isset($form['editor']['settings']['subform']['plugins']['codesnippet'])) {
-
-    $defaults = \Drupal::config('codesnippet_mathstats.settings');
-
-    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options'] = $defaults->get('languages');
-
-    asort($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']);
-  }
-}
