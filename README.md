@@ -10,7 +10,7 @@ Adds syntax highlighting support for Mathematics and Statistics heavy languages 
 - [drupal/codesnippet](https://www.drupal.org/project/codesnippet)
 
 ## Installation
-**Note:** This module will clash with existing [highlight.js](https://highlightjs.org) libraries, you may need to build a [custom package](https://highlightjs.org/download) and place it in your libraries folder.
+**Note:** This module will clash with existing [highlight.js](https://highlightjs.org) libraries, you may need to build a [custom package](https://highlightjs.org/download) and place it in your libraries folder: `/<drupal-root>/libraries/codesnippet/lib/highlight`.
 
 ## Usage
 To enable syntax highlighting, add the prefix "language-*" to any identifier listed in the table below to the class section of a code block.
