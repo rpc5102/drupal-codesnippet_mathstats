@@ -6,3 +6,47 @@
  * Add support for C/C++, Fortran, Mathematica, Matlab, Python, R, SAS, STATA, LaTeX/TeX
  * @see: https://www.drupal.org/project/codesnippet
  */
+ 
+ use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Add extra languages for CodeSnippet
+ * @param $form
+ * @param FormStateInterface $form_state
+ * @param $form_id
+ */
+function codesnippet_mathstats_form_filter_format_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if (isset($form['editor']['settings']['subform']['plugins']['codesnippet'])) {
+
+    // Remove defaults
+    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']);
+
+    // Set new language choices
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['basic'] = 'Basic';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['c'] = 'C';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['cpp'] = 'C++';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['css'] = 'CSS';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['fortran'] = 'Fortran';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['haskell'] = 'Haskell';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['xml'] = 'HTML';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['java'] = 'Java';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['javascript'] = 'JavaScript';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['json'] = 'JSON';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['julia'] = 'Julia';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['tex'] = 'LaTeX/TeX';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['markdown'] = 'Markdown';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['matlab'] = 'Matlab';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['perl'] = 'Perl';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['python'] = 'Python';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['r'] = 'R';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['sas'] = 'SAS';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['scilab'] = 'Scilab';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['sql'] = 'SQL';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['stata'] = 'Stata';
+    $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['typescript'] = 'TypeScript';
+    
+    asort($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']);
+  }
+}

@@ -18,6 +18,6 @@
     "source": "https://github.com/rpc5102/codesnippet_mathstats.git"
   },
   "require": {
-    "drupal/codesnippet": "^1.6"
+    "drupal/codesnippet": "^1.7"
   }
 }
